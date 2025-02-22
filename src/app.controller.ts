@@ -69,7 +69,7 @@ export class AppController {
     res.header('Content-Type', 'text/xml');
     res.send(`
       <Response>
-        <Message>¡Hola! Recibimos tu mensaje: "${messageBody}".</Message>
+        <Message>¡Hola! Bunkercode ha recibido tu mensaje: "${messageBody}".</Message>
       </Response>
     `);
   }
