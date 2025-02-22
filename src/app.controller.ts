@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Req, Res, UnauthorizedException } from '@nestjs/common';
+import { Controller, Post, Body, Req, Res, UnauthorizedException, Get } from '@nestjs/common';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { validateRequest } from 'twilio/lib/webhooks/webhooks';
 
@@ -6,6 +6,11 @@ import { validateRequest } from 'twilio/lib/webhooks/webhooks';
 @Controller()
 export class AppController {
   constructor() { }
+
+  @Get()
+  test() {
+    return "works";
+  }
 
 
   @Post('webhook')
